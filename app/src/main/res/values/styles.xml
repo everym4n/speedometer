@@ -6,6 +6,27 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="speedometerStyle">@style/SpeedometerDefault</item>
+    </style>
+
+    <style name="SpeedometerDefault">
+        <item name="maxSpeed">@integer/default_maxSpeed</item>
+        <item name="textColor">@android:color/black</item>
+        <item name="arrowColor">@color/colorRed</item>
+        <item name="lowSpeedColor">@color/colorRed</item>
+        <item name="mediumSpeedColor">@color/colorYellow</item>
+        <item name="highSpeedColor">@color/colorBlue</item>
+
+
+
+    </style>
+
+    <style name="SpeedometerCustom">
+        <item name="maxSpeed">300</item>
+        <item name="textColor">@android:color/black</item>
+        <item name="arrowColor">@color/colorYellow</item>
+
+
     </style>
 
 </resources>
