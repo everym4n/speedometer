@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,16 +8,31 @@
     android:padding="@dimen/main_padding"
     tools:context=".MainActivity">
 
+
     <com.andreveryman.speedometer.SpeedoMeterView
         android:id="@+id/spm_speed"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sb_speed"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:padding="12dp"
+
+
         app:maxSpeed="@integer/main_activity_max_speed"
 
-        android:layout_height="300dp"/>
+        />
+
     <androidx.appcompat.widget.AppCompatSeekBar
         android:id="@+id/sb_speed"
-        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:max="@integer/main_activity_max_speed"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
